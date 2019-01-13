@@ -1,0 +1,44 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div style="text-align:center">
+        <br>
+        <h1>
+          {{title}}!
+        </h1>
+        <br>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <hr>
+          <div>
+            <b> Address:</b>{{transferFrom}}
+            <br>
+            <span>
+              <b>Balance:</b>{{balance}}</span>
+          </div>
+          <hr>
+        </div>
+        <div class="col-md-6">
+          <form>
+            <label for="transfer"><b>Tranferir a </b></label>
+            <input type="text" class="inputfield" placeholder="Transferir a" [(ngModel)]="transferTo" name="transferTo"
+              required>
+
+            <label for="amount"><b>Valor en Ether</b></label>
+            <input type="text" class="inputfield" placeholder="Enter Valor in Ether" [(ngModel)]="amount" name="amount"
+              required>
+
+            <label for="remarks"><b>Observaciones</b></label>
+            <textarea class="inputfield" placeholder="Ingrese las observaciones" name="remarks" required [(ngModel)]="remarks"></textarea>
+            <hr>
+            <button type="reset" class="trfbtn resetbtn">Borrar</button>&nbsp;&nbsp;
+            <button type="submit" class="trfbtn" (click)="transferEther($event)">Transferir Ether</button>&nbsp;&nbsp;
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
